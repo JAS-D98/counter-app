@@ -1,11 +1,18 @@
+let saveEl=document.getElementById('save-el')
+let countEl=document.getElementById('count-el')
 let count=0;
-let doc=document.getElementById('count-el')
+
+
 function increment(){
-    doc.innerText=count++;
+    count+=1;
+    countEl.textContent=count;
 }
 increment()
 
-function decrement(){
-    doc.innerText=count--;
+
+function save(){
+    let countStr=count + " - "
+    saveEl.textContent+=countStr;
+    countEl.textContent=0;
+    count=0;
 }
-decrement()
